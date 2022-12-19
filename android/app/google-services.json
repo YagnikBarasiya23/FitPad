@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "546001277191",
+    "project_id": "fitpad-ff2f5",
+    "storage_bucket": "fitpad-ff2f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546001277191:android:7b3a657ea2580334bd75a2",
+        "android_client_info": {
+          "package_name": "com.example.fitpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546001277191-qsdsd17mt2r8dbubec101ln0rkg1f1a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYQakYeVuLrNUAxPMLrdZjXuJKGcY2q4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546001277191-qsdsd17mt2r8dbubec101ln0rkg1f1a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
