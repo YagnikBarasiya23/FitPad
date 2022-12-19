@@ -1,16 +1,12 @@
-# fitpad
 
-A new Flutter project.
+FitPad
 
-## Getting Started
+A fitness app
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![ss6](https://user-images.githubusercontent.com/119105452/208398507-976a45ee-0ecb-42b7-a12d-61a82d0c9f43.jpg)
+![ss7](https://user-images.githubusercontent.com/119105452/208398502-e06a6204-1fcc-4769-9ace-060fa1c6272c.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
