@@ -1,7 +1,7 @@
 
 FitPad
 
-A fitness app
+A fitness app, along with six different fitness calculators and a todolist
 
 
 
