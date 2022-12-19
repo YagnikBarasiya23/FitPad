@@ -3,11 +3,6 @@ FitPad
 
 A fitness app
 
------features-----
-
-Easy user interface
-Different types of fitness calculators
-toDoList 
 
 
 ![ss6](https://user-images.githubusercontent.com/119105452/208398507-976a45ee-0ecb-42b7-a12d-61a82d0c9f43.jpg)
@@ -15,3 +10,9 @@ toDoList
 
 
 
+
+-----features-----
+
+Easy user interface,
+Different types of fitness calculators,
+toDoList,
