@@ -256,9 +256,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
         child: Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFE57944),
-
-        title: Text(widget.name.toString(),
-            style: kTextStyleHeaders.copyWith(color: Colors.black)),
+        title: Text(widget.name.toString(), style: kTextStyleHeaders),
       ),
       body: naam == null
           ? const Center(

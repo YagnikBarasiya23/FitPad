@@ -203,10 +203,9 @@ class _ListScreenState extends State<ListScreen> {
         child: Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFE57944),
-
         title: Text(
           'Exercises',
-          style: kTextStyleHeaders.copyWith(color: Colors.black),
+          style: kTextStyleHeaders,
         ),
       ),
       body: widget.level == DifficultyModel.getDifficultyData[2].level
