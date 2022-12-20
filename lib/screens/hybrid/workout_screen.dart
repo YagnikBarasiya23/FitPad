@@ -255,7 +255,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFFE57944),
+        backgroundColor: blueColor,
         title: Text(widget.name.toString(), style: kTextStyleHeaders),
       ),
       body: naam == null

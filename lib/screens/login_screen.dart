@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         inAsyncCall: showSpinner,
         child: Center(
-          child: SingleChildScrollView(
+          child: SingleChildScrollView( reverse: true,
             child: Form(
               key: formKey,
               child: Column(
@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Padding(
                     padding: const EdgeInsets.only(
                         bottom: 15, left: 40, right: 40, top: 30),
-                    child: TextFormField(
+                    child: TextFormField(textCapitalization: TextCapitalization.words,
                       decoration: kTextFieldDecoration.copyWith(
                           hintText: "Email",
                           prefixIcon: const Icon(
@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
-                    child: TextFormField(
+                    child: TextFormField(textCapitalization: TextCapitalization.words,
                       decoration: kTextFieldDecoration.copyWith(
                           hintText: "Password",
                           suffixIcon: IconButton(

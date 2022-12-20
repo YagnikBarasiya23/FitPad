@@ -82,13 +82,15 @@ class _HybridScreenState extends State<HybridScreen> {
                     padding: const EdgeInsets.all(16.0),
                     child: ListView.builder(
                       itemBuilder: (context, index) {
-                        return crossfitTile(index, () {
-                          setState(() {
-                            screenState = 1;
-                            crossfit =
-                                CrossfitModel.getCrossfitData[index].name;
-                          });
-                        });
+                        return FittedBox(
+                          child: crossfitTile(index, () {
+                            setState(() {
+                              screenState = 1;
+                              crossfit =
+                                  CrossfitModel.getCrossfitData[index].name;
+                            });
+                          }),
+                        );
                       },
                       itemCount: 5,
                       scrollDirection: Axis.vertical,

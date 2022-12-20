@@ -383,7 +383,7 @@ class _CalculatorState extends State<Calculator> {
                                 borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(20),
                                     topLeft: Radius.circular(20))),
-                            backgroundColor: const Color(0xFF2566CF),
+                            backgroundColor: blueColor,
                             context: context,
                             builder: (context) => ResultSheet(
                               height: height,

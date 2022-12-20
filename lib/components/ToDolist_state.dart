@@ -28,6 +28,12 @@ class ToDoListState extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
                           showModalBottomSheet(
+                            elevation: 5,
+                            shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(20),
+                                    topLeft: Radius.circular(20))),
+                            backgroundColor: blueColor,
                             context: context,
                             builder: (context) => AddTaskSheet(),
                           );
@@ -73,12 +79,11 @@ class _AddTaskSheetState extends State<AddTaskSheet> {
       padding: const EdgeInsets.all(69.0),
       child: Column(
         children: [
-          Text(
-            'Add your task',
-            style: kTextStyleHeaders.copyWith(color: Colors.black),
-          ),
+          const Text('Add your task', style: kTextStyleHeaders),
           const SizedBox(height: 30),
           TextField(
+            textCapitalization: TextCapitalization.words,
+            style: kTextStyleSmall,
             onChanged: (value) {
               setState(() {
                 task = value;
@@ -154,7 +159,8 @@ class TaskTile extends StatelessWidget {
         task.toString(),
         style: kTextStyleLarge.copyWith(
             color: Colors.black,
-            decoration: onChecked == true ? TextDecoration.lineThrough : null),
+            decoration: onChecked == true ? TextDecoration.lineThrough : null,
+            decorationThickness: 3),
       ),
       trailing: Checkbox(
         value: onChecked,

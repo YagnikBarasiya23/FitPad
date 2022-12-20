@@ -202,8 +202,8 @@ class _ListScreenState extends State<ListScreen> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFFE57944),
-        title: Text(
+        backgroundColor: blueColor,
+        title: const Text(
           'Exercises',
           style: kTextStyleHeaders,
         ),
@@ -219,37 +219,33 @@ class _ListScreenState extends State<ListScreen> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(top: 5, left: 5, right: 5),
-                    child: Column(
-                      children: [
-                        Card(
-                          elevation: 3,
-                          shadowColor: Colors.grey,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          child: ListTile(
-                            leading: const Image(
-                              image: AssetImage('images/mainIcon.png'),
-                              height: 40,
-                              width: 40,
-                            ),
-                            title: Text(decodeData[index]['name'],
-                                style: kTextStyleLarge.copyWith(
-                                    color: Colors.black)),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => WorkoutScreen(
-                                      muscle: widget.muscle,
-                                      level: widget.level,
-                                      name: decodeData[index]['name'],
-                                      crossfit: widget.crossfit,
-                                    ),
-                                  ));
-                            },
-                          ),
+                    child: Card(
+                      elevation: 3,
+                      shadowColor: Colors.grey,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ListTile(
+                        leading: const Image(
+                          image: AssetImage('images/mainIcon.png'),
+                          height: 40,
+                          width: 40,
                         ),
-                      ],
+                        title: Text(decodeData[index]['name'],
+                            style: kTextStyleLarge.copyWith(
+                                color: Colors.black)),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => WorkoutScreen(
+                                  muscle: widget.muscle,
+                                  level: widget.level,
+                                  name: decodeData[index]['name'],
+                                  crossfit: widget.crossfit,
+                                ),
+                              ));
+                        },
+                      ),
                     ),
                   );
                 },

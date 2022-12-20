@@ -11,17 +11,19 @@ class FeedbackScreen extends StatelessWidget {
         child: Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: const Color(0xFFE57944),
+        backgroundColor: blueColor,
         title: const Text(
           'Feedback',
           style: kTextStyleHeaders,
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.only(left: 30,right: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+
           children: [
+            const SizedBox(height: 50),
             const Text(
               'Rate Experience',
               style: kTextStyleHeadings,
@@ -37,6 +39,9 @@ class FeedbackScreen extends StatelessWidget {
                   color: Color(0xFFE21414),
                 );
               },
+              itemCount: 5,
+              itemSize: 45,
+              unratedColor: Colors.white,
               itemPadding: const EdgeInsets.all(5),
               initialRating: 0,
               allowHalfRating: true,
@@ -44,30 +49,33 @@ class FeedbackScreen extends StatelessWidget {
             ),
             const Divider(thickness: 1, height: 50),
             TextFormField(
-              decoration: const InputDecoration(
-                  hintText: 'Tell us how can we improve',
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey))),
+              decoration: kTextFieldDecoration.copyWith(
+                hintText: 'Tell us how can we improve',
+              ),
             ),
-            mainButton(
-              "Submit",
-              () {
-                Alert(
-                    context: context,
-                    title: 'Thank You',
-                    desc: 'Your feedback has been successfully submitted',
-                    type: AlertType.success,
-                    closeIcon: const Icon(Icons.clear),
-                    style: const AlertStyle(
-                        animationType: AnimationType.shrink, alertElevation: 2),
-                    buttons: [
-                      DialogButton(
-                          child: const Text('Back'),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          }),
-                    ]).show();
-              },
+            const SizedBox(height: 50),
+            Center(
+              child: mainButton(
+                "Submit",
+                () {
+                  Alert(
+                      context: context,
+                      title: 'Thank You',
+                      desc: 'Your feedback has been successfully submitted',
+                      type: AlertType.success,
+                      closeIcon: const Icon(Icons.clear),
+                      style: const AlertStyle(
+                          animationType: AnimationType.shrink,
+                          alertElevation: 2),
+                      buttons: [
+                        DialogButton(
+                            child: const Text('Back'),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            }),
+                      ]).show();
+                },
+              ),
             ),
           ],
         ),

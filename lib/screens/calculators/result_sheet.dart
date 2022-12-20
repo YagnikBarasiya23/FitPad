@@ -64,12 +64,12 @@ class ResultSheet extends StatelessWidget {
           children: [
             Text(
               'Your $name is',
-              style: kTextStyleSmall.copyWith(color: Colors.white),
+              style: kTextStyleSmall,
             ),
             const SizedBox(height: 15),
             Text(
               sum.toStringAsFixed(1),
-              style: kTextStyleHeadings.copyWith(color: Colors.white),
+              style: kTextStyleHeadings,
             ),
           ],
         ),

@@ -52,6 +52,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         inAsyncCall: showSpinner,
         child: Center(
           child: SingleChildScrollView(
+            reverse: true,
             child: Form(
               key: formKey,
               child: Column(
@@ -66,7 +67,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   Padding(
                     padding: const EdgeInsets.only(
                         bottom: 15, left: 40, right: 40, top: 30),
-                    child: TextFormField(
+                    child: TextFormField(textCapitalization: TextCapitalization.words,
                       decoration: kTextFieldDecoration.copyWith(
                           hintText: "Email",
                           prefixIcon: const Icon(

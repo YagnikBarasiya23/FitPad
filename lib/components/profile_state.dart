@@ -3,6 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:fitpad/constants.dart';
+import 'package:fitpad/screens/feedback_screen.dart';
 import 'package:fitpad/screens/reset_password_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -79,7 +80,11 @@ class _ProfileStateState extends State<ProfileState> {
                 Uri.parse('https://pages.flycricket.io/fitpad/privacy.html');
             urlLaunch(url);
           }),
-          profileTile(Icons.feedback, 'Feedback', () {}),
+          profileTile(Icons.feedback, 'Feedback', ()  => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FeedbackScreen(),
+              ))),
           Row(
             children: [
               const SizedBox(width: 10),

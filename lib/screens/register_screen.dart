@@ -91,7 +91,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
         inAsyncCall: showSpinner,
         child: Center(
-          child: SingleChildScrollView(
+          child: SingleChildScrollView( reverse: true,
             child: Form(
               key: formKey,
               child: Column(
@@ -106,6 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
                     child: TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       decoration: kTextFieldDecoration.copyWith(
                           hintText: "Username",
                           prefixIcon: const Icon(
@@ -129,6 +130,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
                     child: TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       decoration: kTextFieldDecoration.copyWith(
                           hintText: "Email",
                           prefixIcon: const Icon(
@@ -177,6 +179,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
                     child: TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       decoration: kTextFieldDecoration.copyWith(
                           hintText: "Password",
                           suffixIcon: IconButton(
