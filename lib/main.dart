@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:fitpad/constants.dart';
-import 'package:fitpad/models/toDoList_model.dart';
-import 'package:fitpad/screens/main_screen.dart';
-import 'package:fitpad/screens/welcome_screen.dart';
+import 'package:fitpad/features/main_screen.dart';
+import 'package:fitpad/features/toDoList/models/toDoList_model.dart';
+import 'package:fitpad/features/welcome/screens/welcome_screen.dart';
+import 'package:fitpad/shared/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -12,10 +12,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(FitPad());
+  runApp(const FitPad());
 }
 
 class FitPad extends StatelessWidget {
+  const FitPad({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<TaskData>(
@@ -23,13 +25,15 @@ class FitPad extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(scaffoldBackgroundColor: const Color(0xff181920)),
-        home: MainPage(),
+        home: const MainPage(),
       ),
     );
   }
 }
 
 class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -54,9 +58,9 @@ class MainPage extends StatelessWidget {
             ),
           );
         } else if (snapshot.hasData) {
-          return MainScreen();
+          return const NaviBar();
         } else {
-          return WelcomeScreen();
+          return const WelcomeScreen();
         }
       },
     );
