@@ -20,10 +20,9 @@ class FeedbackScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 30,right: 30),
+        padding: const EdgeInsets.only(left: 30, right: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-
           children: [
             const SizedBox(height: 50),
             const Text(
@@ -57,7 +56,9 @@ class FeedbackScreen extends StatelessWidget {
             ),
             const SizedBox(height: 50),
             Center(
-              child: CustomButton(text: 'Submit', onPressed:   () {
+                child: CustomButton(
+              text: 'Submit',
+              onPressed: () {
                 Alert(
                     context: context,
                     title: 'Thank You',
@@ -65,8 +66,7 @@ class FeedbackScreen extends StatelessWidget {
                     type: AlertType.success,
                     closeIcon: const Icon(Icons.clear),
                     style: const AlertStyle(
-                        animationType: AnimationType.shrink,
-                        alertElevation: 2),
+                        animationType: AnimationType.shrink, alertElevation: 2),
                     buttons: [
                       DialogButton(
                           child: const Text('Back'),
@@ -74,8 +74,8 @@ class FeedbackScreen extends StatelessWidget {
                             Navigator.pop(context);
                           }),
                     ]).show();
-              },)
-            ),
+              },
+            )),
           ],
         ),
       ),

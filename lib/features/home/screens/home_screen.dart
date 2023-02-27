@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    const HybridScreen(flag: 1),
+                                const HybridScreen(flag: 1),
                               ));
                         },
                         child: cardTile(2, 'CROSSFIT')),
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    const HybridScreen(flag: 0),
+                                const HybridScreen(flag: 0),
                               ));
                         },
                         child: cardTile(3, 'GYM')),

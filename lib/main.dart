@@ -24,7 +24,9 @@ class FitPad extends StatelessWidget {
       create: (_) => TaskData(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(scaffoldBackgroundColor: const Color(0xff181920)),
+        theme: ThemeData(
+            scaffoldBackgroundColor: const Color(0xff181920),
+           ),
         home: const MainPage(),
       ),
     );

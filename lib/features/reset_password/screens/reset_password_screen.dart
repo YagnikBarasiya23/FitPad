@@ -47,6 +47,10 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: ModalProgressHUD(
         progressIndicator: const CircularProgressIndicator(
           color: blueColor,
